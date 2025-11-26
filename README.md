@@ -40,4 +40,12 @@ Example:
 nk4 https://www.example.com
 ```
 
-This will output the extracted article text to stdout.
+This will output the extracted article metadata in YAML frontmatter format followed by the article text to stdout.
+
+The output includes:
+- Title
+- URL
+- Authors
+- Publication date
+- Top image URL
+- Article text content
