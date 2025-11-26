@@ -1,4 +1,4 @@
-# NK4 - Newspaper4K CLI Wrapper
+# N4K - Newspaper4K CLI Wrapper
 
 A simple command-line wrapper for newspaper4k that extracts article text from URLs.
 
@@ -21,23 +21,23 @@ Or manually:
 
 2. Make the wrapper script executable:
    ```bash
-   chmod +x nk4.sh
+   chmod +x n4k.sh
    ```
 
 3. Create a symlink to make it available system-wide (requires sudo):
    ```bash
-   sudo ln -s $(pwd)/nk4.sh /usr/local/bin/nk4
+   sudo ln -s $(pwd)/n4k.sh /usr/local/bin/n4k
    ```
 
 ## Usage
 
 ```bash
-nk4 <url>
+n4k <url>
 ```
 
 Example:
 ```bash
-nk4 https://www.example.com
+n4k https://www.example.com
 ```
 
 This will output the extracted article metadata in YAML frontmatter format followed by the article text to stdout.

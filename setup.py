@@ -1,15 +1,15 @@
 from setuptools import setup
 
 setup(
-    name="nk4",
+    name="n4k",
     version="0.1.0",
-    py_modules=["nk4"],
+    py_modules=["n4k"],
     install_requires=[
         "newspaper4k",
     ],
     entry_points={
         "console_scripts": [
-            "nk4=nk4:main",
+            "n4k=n4k:main",
         ],
     },
 )

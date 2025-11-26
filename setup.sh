@@ -1,7 +1,7 @@
 #!/bin/bash
-# Setup script for NK4
+# Setup script for N4K
 
-echo "Setting up NK4..."
+echo "Setting up N4K..."
 
 # Create virtual environment if it doesn't exist
 if [ ! -d "venv" ]; then
@@ -17,11 +17,11 @@ pip install -e .
 
 # Make wrapper script executable
 echo "Making wrapper script executable..."
-chmod +x nk4.sh
+chmod +x n4k.sh
 
 echo "Setup complete!"
 echo ""
-echo "To make nk4 available system-wide, run:"
-echo "sudo ln -s $(pwd)/nk4.sh /usr/local/bin/nk4"
+echo "To make n4k available system-wide, run:"
+echo "sudo ln -s $(pwd)/n4k.sh /usr/local/bin/n4k"
 echo ""
-echo "Or add $(pwd) to your PATH and use ./nk4.sh"
+echo "Or add $(pwd) to your PATH and use ./n4k.sh"

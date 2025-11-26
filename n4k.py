@@ -5,7 +5,7 @@ from newspaper import Article
 
 def main():
     if len(sys.argv) != 2 or sys.argv[1] in ["-h", "--help"]:
-        print("Usage: nk4 <url>", file=sys.stderr)
+        print("Usage: n4k <url>", file=sys.stderr)
         sys.exit(1)
 
     url = sys.argv[1]
