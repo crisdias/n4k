@@ -1,0 +1,2 @@
+setuptools
+newspaper4k
