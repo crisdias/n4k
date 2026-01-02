@@ -4,19 +4,29 @@ A simple command-line wrapper for newspaper4k that extracts article text from UR
 
 ## Installation
 
+### Prerequisites
+
+This project uses [uv](https://github.com/astral-sh/uv) for fast Python package management. If you don't have uv installed:
+
+```bash
+curl -LsSf https://astral.sh/uv/install.sh | sh
+```
+
+### Quick Setup
+
 1. Clone or download this repository
 2. Run the setup script:
    ```bash
    ./setup.sh
    ```
 
-Or manually:
-1. Create a virtual environment and install dependencies:
+### Manual Setup
+
+1. Create a virtual environment and install dependencies using uv:
    ```bash
-   python -m venv venv
-   source venv/bin/activate
-   pip install -r requirements.txt
-   pip install -e .
+   uv venv
+   source .venv/bin/activate
+   uv pip install -e .
    ```
 
 2. Make the wrapper script executable:

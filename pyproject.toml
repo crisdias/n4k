@@ -1,0 +1,16 @@
+[project]
+name = "n4k"
+version = "0.1.0"
+description = "A simple command-line wrapper for newspaper4k that extracts article text from URLs"
+readme = "README.md"
+requires-python = ">=3.8"
+dependencies = [
+    "newspaper4k",
+]
+
+[project.scripts]
+n4k = "n4k:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"

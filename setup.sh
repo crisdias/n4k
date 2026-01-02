@@ -3,17 +3,32 @@
 
 echo "Setting up N4K..."
 
-# Create virtual environment if it doesn't exist
-if [ ! -d "venv" ]; then
-    echo "Creating virtual environment..."
-    python -m venv venv
+# Check if uv is installed
+if ! command -v uv &> /dev/null; then
+    echo "uv is not installed. Installing uv..."
+    curl -LsSf https://astral.sh/uv/install.sh | sh
+    echo "Please restart your shell or run: source $HOME/.cargo/env"
+    exit 1
 fi
 
-# Activate virtual environment and install dependencies
+# Check for old venv directory and remove it
+if [ -d "venv" ]; then
+    echo "Found old 'venv' directory from pip installation."
+    echo "Removing it to create new '.venv' with uv..."
+    rm -rf venv
+fi
+
+# Create virtual environment and install dependencies with uv
+if [ ! -d ".venv" ]; then
+    echo "Creating virtual environment with uv..."
+    uv venv
+else
+    echo "Virtual environment '.venv' already exists."
+fi
+
 echo "Installing dependencies..."
-source venv/bin/activate
-pip install -r requirements.txt
-pip install -e .
+source .venv/bin/activate
+uv pip install -e .
 
 # Make wrapper script executable
 echo "Making wrapper script executable..."
