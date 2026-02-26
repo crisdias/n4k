@@ -22,21 +22,19 @@ curl -LsSf https://astral.sh/uv/install.sh | sh
 
 ### Manual Setup
 
-1. Create a virtual environment and install dependencies using uv:
+1. Install the CLI as a uv tool (editable mode for local development):
    ```bash
-   uv venv
-   source .venv/bin/activate
-   uv pip install -e .
+   uv tool install --editable .
    ```
 
-2. Make the wrapper script executable:
+2. Ensure uv tool binaries are available in your shell:
    ```bash
-   chmod +x n4k.sh
+   uv tool update-shell
    ```
 
-3. Create a symlink to make it available system-wide (requires sudo):
+3. Restart your shell and run:
    ```bash
-   sudo ln -s $(pwd)/n4k.sh /usr/local/bin/n4k
+   n4k <url>
    ```
 
 ## Usage
