@@ -4,6 +4,12 @@ from newspaper import Article
 
 
 def main():
+    try:
+        sys.stdout.reconfigure(encoding="utf-8", errors="replace")
+        sys.stderr.reconfigure(encoding="utf-8", errors="replace")
+    except Exception:
+        pass
+
     if len(sys.argv) != 2 or sys.argv[1] in ["-h", "--help"]:
         print("Usage: n4k <url>", file=sys.stderr)
         sys.exit(1)
